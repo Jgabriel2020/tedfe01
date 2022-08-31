@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <title>Ted 01</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet " type="text" href="ted" />
+    <script>
+       
+       var altura = [1.80, 1.67, 1.96, 1.65, 1.80, 1.62, 1.74, 2.18, 1.55, 1.92, 1.96, 1.52, 1.70, 2.15, 2.22];
+        var genero = ["M", "F", "M", "F", "M", "F", "M", "F", "M", "F", "M", "F", "M", "F", "M"];
+        
+        
+        
+        function alturaMenor(altura) {
+            var menorAltura = altura[0];
+            for (let i = 0; i < altura.length; i++) {
+                if (altura[i] < menorAltura[i]) {
+                    menor = altura[i];
+                }
+            }
+            return menorAltura;
+ 
+       
+       
+            function alturaMaior(altura) {
+            var maiorAltura = altura[0];
+            for (let i = 0; i < altura.length; i++) {
+                if (altura[i] > maiorAltura) {
+                    maiorAltura = altura[i];
+                }
+            }
+            return maiorAltura;
+        }
+ 
+
+        }
+ 
+        function mediaHomens(genero, altura) {
+            var soma = 0;
+            var media = 0;
+            for (let i = 0; i < genero.length; i++) {
+                if (genero[i] === "M") {
+                    soma += altura[i];
+                    media++;
+                }
+            }
+            return (soma / media);
+        }
+ 
+        function qtdeMulheres(genero) {
+            var mulheres = 0;
+            for (let i = 0; i < genero.length; i++) {
+                if (genero[i] === "F") {
+                    mulheres++;
+                }
+            }
+            return mulheres;
+        }
+ 
+        alert("A Maior Altura é " + alturaMaior(altura) + " Metros.");
+        alert("A Menor Altura é " + alturaMenor(altura) + " Metros.");
+        alert("A Média de Altura dos homens é de " + mediaHomens(genero, altura).toFixed(2) + " Metros.");
+        alert("A Quantidade é de " + qtdeMulheres(genero) + " Mulheres.");
+    </script>
+ 
+</head>
+ <body>
+     
+ </body>
+ 
+ 
